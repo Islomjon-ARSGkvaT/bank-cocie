@@ -8,6 +8,36 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 
+//////////////////////////////////////////////////
+const barsMmenu = document.querySelector('.btn-bars');
+const barsOverlay = document.querySelector('.phone-clos-bac');
+const barsCols = document.querySelector('.bars-cols');
+const phoneTable = document.querySelector('.phone-table');
+
+barsMmenu.addEventListener('click', () => {
+  barsOverlay.classList.remove('hidden');
+  phoneTable.classList.remove('hidden');
+  phoneTable.classList.add('animation');
+});
+
+function allbars() {
+  barsOverlay.classList.add('hidden');
+  phoneTable.classList.add('hidden');
+  phoneTable.classList.remove('animation');
+}
+barsCols.addEventListener('click', allbars);
+barsOverlay.addEventListener('click', allbars);
+
+document.addEventListener('keydown', e => {
+  if (e.key == 'Escape') {
+    allbars();
+  } else if (e.key == 'm') {
+    barsOverlay.classList.remove('hidden');
+    phoneTable.classList.remove('hidden');
+    phoneTable.classList.add('animation');
+  }
+});
+
 const openModal = function (e) {
   e.preventDefault();
 
