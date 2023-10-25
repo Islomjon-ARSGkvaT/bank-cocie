@@ -31,7 +31,8 @@ barsOverlay.addEventListener('click', allbars);
 document.addEventListener('keydown', e => {
   if (e.key == 'Escape') {
     allbars();
-  } else if (e.key == 'm') {
+  }
+  if (e.key == 'm') {
     barsOverlay.classList.remove('hidden');
     phoneTable.classList.remove('hidden');
     phoneTable.classList.add('animation');
@@ -79,3 +80,22 @@ cookie.style.height = getComputedStyle(cookie).height + '30px';
 document
   .querySelector('.btn--close-cookie')
   .addEventListener('click', () => cookie.remove());
+
+//////////////////////////////////////////
+// Atrributs
+const logo = document.querySelector('.nav__logo');
+
+console.log(logo);
+console.log(logo.alt);
+console.log(logo.src);
+
+console.log(logo.designer); // undefined
+
+console.log(logo.getAttribute('designer'));
+
+logo.alt = 'Bankist logo by John';
+
+logo.setAttribute('company','Banklist');
+
+console.log(logo.dataset.id);
+console.log(logo.dataset.version);

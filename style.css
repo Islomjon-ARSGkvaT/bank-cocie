@@ -666,92 +666,94 @@ h4 {
   html {
     font-size: 56.25%;
   }
-
-  .nav__links {
-    display: none;
+  .nav {
+    background-color: rgba(255, 255, 255, 0.95);
   }
-  @keyframes ulbars {
-    0% {
-      transform: translateX(200px);
+  position: fixed;
+}
+.nav__links {
+  display: none;
+}
+@keyframes ulbars {
+  0% {
+    transform: translateX(+200px);
+  }
+
+  100% {
+    transform: translateX(0px);
     }
+}
 
-    100% {
-      transform: translateX(0px);
-    }
-  }
+.btn-bars {
+  display: block;
+  border: none;
+  width: 26px;
+  height: 26px;
+  position: fixed;
+  left: 90%;
+}
+.btn-bars i {
+  font-size: 24px;
+}
+.phone-table,
+.phone-clos-bac {
+  display: block;
+}
+.phone-clos-bac {
+  background: #00000014;
+  width: 100% !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  height: 100vh !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.animation {
+  animation: ulbars 4s 1;
+}
+.phone-table {
+  position: absolute;
+  top: 40px;
+  left: 80%;
+  width: 165px;
+  padding: 20px 14px 20px 15px;
+  background-color: #fff;
+  border-radius: 7px;
 
-  .btn-bars {
-    display: block;
-    border: none;
-    width: 26px;
-    height: 26px;
-    position: fixed;
-    left: 90%;
-
-  }
-  .btn-bars i{
-    font-size: 24px;
-  }
-  .phone-table,
-  .phone-clos-bac {
-    display: block;
-  }
-  .phone-clos-bac {
-    background: #00000014;
-    width: 100% !important;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    height: 100vh !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  .animation{
-    animation: ulbars 4s 1;
-  }
-  .phone-table {
-    position: fixed;
-    top: 40px;
-    left: 77%;
-    width: 165px;
-    padding: 20px 14px 20px 15px;
-    background-color: #fff;
-    border-radius: 7px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .bars-cols {
-    background: none;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    color: red;
-    position: relative;
-    left: 130px;
-    top: 8px;
-    border: none;
-    border: 0.1px solid black;
-  }
-  .bars-cols:hover {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-  }
-  .phone-table li {
-    list-style: none;
-  }
-  .phone-table li a {
-    text-decoration: none;
-    color: rgb(44, 44, 227);
-    font-size: 18px;
-  }
-  .phone-table li a:hover {
-    font-weight: 700;
-    color: aqua;
-  }
-  .bars-cols {
-    position: absolute;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bars-cols {
+  background: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: red;
+  position: relative;
+  left: 130px;
+  top: 8px;
+  border: none;
+  border: 0.1px solid black;
+}
+.bars-cols:hover {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+.phone-table li {
+  list-style: none;
+}
+.phone-table li a {
+  text-decoration: none;
+  color: rgb(44, 44, 227);
+  font-size: 18px;
+}
+.phone-table li a:hover {
+  font-weight: 700;
+  color: aqua;
+}
+.bars-cols {
+  position: absolute;
 }
